@@ -67,26 +67,26 @@ source .venv/bin/activate  # (Linux/macOS)
 
 # Install directly from GitHub repository
 # For CPU-only PyTorch (recommended for most users)
-pip install "git+https://github.com/instadeepai/InstaGeo-E2E-Geospatial-ML.git#egg=InstaGeo[all,cpu]"
+pip install "git+https://github.com/NicoCM383/InstaGeo-E2E-Geospatial-ML-.git#egg=InstaGeo[all,cpu]"
 
 # For GPU-enabled PyTorch (Linux only, requires CUDA)
-pip install "git+https://github.com/instadeepai/InstaGeo-E2E-Geospatial-ML.git#egg=InstaGeo[all,gpu]"
+pip install "git+https://github.com/NicoCM383/InstaGeo-E2E-Geospatial-ML-.git#egg=InstaGeo[all,gpu]"
 
 # For development (includes dev tools)
-pip install "git+https://github.com/instadeepai/InstaGeo-E2E-Geospatial-ML.git#egg=InstaGeo[all,dev,cpu]"
+pip install "git+https://github.com/NicoCM383/InstaGeo-E2E-Geospatial-ML-.git#egg=InstaGeo[all,dev,cpu]"
 
 # Install from specific branch (e.g., develop)
-pip install "git+https://github.com/instadeepai/InstaGeo-E2E-Geospatial-ML.git@develop#egg=InstaGeo[all,cpu]"
+pip install "git+https://github.com/NicoCM383/InstaGeo-E2E-Geospatial-ML-.git@develop#egg=InstaGeo[all,cpu]"
 
 # Install from specific tag/release
-pip install "git+https://github.com/instadeepai/InstaGeo-E2E-Geospatial-ML.git@v0.1.0#egg=InstaGeo[all,cpu]"
+pip install "git+https://github.com/NicoCM383/InstaGeo-E2E-Geospatial-ML-.git@v0.1.0#egg=InstaGeo[all,cpu]"
 
 ```
 
 #### Option 3: Using pip (Local Development)
 ```bash
 # Clone and navigate to the project (for local development)
-git clone https://github.com/instadeepai/InstaGeo-E2E-Geospatial-ML.git
+git clone https://github.com/NicoCM383/InstaGeo-E2E-Geospatial-ML-.git
 cd InstaGeo-E2E-Geospatial-ML
 
 # Create virtual environment
@@ -134,16 +134,16 @@ uv sync --locked --extra dev --extra cpu
 #### Using pip (from GitHub)
 ```bash
 # Data processing only
-pip install "git+https://github.com/instadeepai/InstaGeo-E2E-Geospatial-ML.git#egg=InstaGeo[data,cpu]"
+pip install "git+https://github.com/NicoCM383/InstaGeo-E2E-Geospatial-ML-.git#egg=InstaGeo[data,cpu]"
 
 # Model training only
-pip install "git+https://github.com/instadeepai/InstaGeo-E2E-Geospatial-ML.git#egg=InstaGeo[model,cpu]"
+pip install "git+https://github.com/NicoCM383/InstaGeo-E2E-Geospatial-ML-.git#egg=InstaGeo[model,cpu]"
 
 # Web application only
-pip install "git+https://github.com/instadeepai/InstaGeo-E2E-Geospatial-ML.git#egg=InstaGeo[apps,cpu]"
+pip install "git+https://github.com/NicoCM383/InstaGeo-E2E-Geospatial-ML-.git#egg=InstaGeo[apps,cpu]"
 
 # Development tools
-pip install "git+https://github.com/instadeepai/InstaGeo-E2E-Geospatial-ML.git#egg=InstaGeo[dev,cpu]"
+pip install "git+https://github.com/NicoCM383/InstaGeo-E2E-Geospatial-ML-.git#egg=InstaGeo[dev,cpu]"
 ```
 
 ## Updating Dependencies
@@ -455,57 +455,4 @@ export STAGE=dev
 
 For detailed setup, API documentation, and deployment options, see the [New Apps Documentation](./instageo/new_apps/README.md).
 
-## Examples and Tutorials
-
-### End-to-End Demo
-See the [InstaGeo Demo Notebook](notebooks/InstaGeo_Demo.ipynb) for a complete end-to-end example using a locust breeding ground prediction task (Note: The App section in this notebook still uses the legacy `apps` component).
-
-### Component-Specific Examples
-- **Data Processing**: See [Data Component Documentation](./instageo/data/README.md) for chip creation examples and check the demo notebooks for data preparation scenarios
-   - **Chip Creator Demo**: [notebooks/chip_creator_demo.ipynb](notebooks/chip_creator_demo.ipynb)
-   - **Raster Chip Creator Demo**: [notebooks/raster_chip_creator_demo.ipynb](notebooks/raster_chip_creator_demo.ipynb)
-   - **Data Cleaner Demo**: [notebooks/data_cleaner_demo.ipynb](notebooks/data_cleaner_demo.ipynb)
-   - **Data Splitter Demo**: [notebooks/data_splitter_demo.ipynb](notebooks/data_splitter_demo.ipynb)
-- **Model Training**: See [Model Component Documentation](./instageo/model/README.md) for training examples with Sen1Floods11, crop classification, and locust prediction
-- **Web Application**: See [New Apps Documentation](./instageo/new_apps/README.md) for API usage and deployment examples
-
-## Deployment
-
-After preparing data and training models, the model can be deployed using InstaGeo.
-See [Quick Start – Full-Stack Application](./instageo/new_apps/README.md#quick-start) for setup and deployment instructions.
-
-### Deployment Features
-- **Containerized Architecture**: Docker Compose for consistent environments
-- **Cloudflare Tunnel Integration**: Secure public access without port forwarding
-- **Nginx Reverse Proxy**: Production-ready load balancing and routing
-- **Worker Scaling**: Configurable data processing and model prediction workers
-- **Monitoring**: Built-in RQ Dashboard for queue and worker monitoring
-- **Environment Management**: Separate configurations for development and production
-
-### Infrastructure Components
-- **Frontend**: React application with hot reload in development
-- **Backend**: FastAPI with multiple worker processes
-- **Database**: Redis for task storage and job queues
-- **Workers**: Scalable RQ workers for data processing and model prediction
-- **Proxy**: Nginx for routing and static file serving
-- **Monitoring**: RQ Dashboard for operational visibility
-
-## Contributing
-
-We welcome contributions to InstaGeo. Please follow the [contribution guidelines](./CONTRIBUTING.md) for submitting pull requests and reporting issues to help us improve the package.
-
-<!-- ## License -->
-
-## Citation
-
-If you use InstaGeo in your research, please cite:
-
-```bibtex
-@article{yusuf2025instageo,
-  title={InstaGeo: Compute-Efficient Geospatial Machine
-Learning from Data to Deployment},
-  author={Yusuf, Ibrahim and {et al.}},
-  journal={arXiv preprint arXiv:2510.05617},
-  year={2025}
-}
-```
+---
