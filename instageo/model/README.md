@@ -243,17 +243,3 @@ Each model may have multiple sizes (e.g., `tiny`, `student`, `teacher`, `normal`
 - Implement additional data augmentation strategies in `process_and_augment`.
 
 ---
-
-## Citation
-
-If you use InstaGeo in your research, please cite:
-
-```bibtex
-@article{yusuf2025instageo,
-  title={InstaGeo: Compute-Efficient Geospatial Machine
-Learning from Data to Deployment},
-  author={Yusuf, Ibrahim and {et al.}},
-  journal={arXiv preprint arXiv:2510.05617},
-  year={2025}
-}
-```
