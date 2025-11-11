@@ -1,8 +1,3 @@
-<picture>
-  <source srcset="assets/logo-dark.png" media="(prefers-color-scheme: dark)">
-  <img src="assets/logo.png" alt="Logo">
-</picture>
-
 ## Overview
 
 InstaGeo is an end-to-end geospatial machine learning framework that automates data preprocessing, model training, inference and deployment, enabling seamless extraction of actionable insights from satellite imagery such [Harmonized Landsat and Sentinel-2 (HLS)](https://hls.gsfc.nasa.gov/) and [Sentinel-2](https://dataspace.copernicus.eu/data-collections/copernicus-sentinel-data/sentinel-2) and [Sentinel-1](https://sentinels.copernicus.eu/copernicus/sentinel-1).
@@ -17,30 +12,6 @@ It leverages the [Prithvi](https://huggingface.co/ibm-nasa-geospatial/Prithvi-10
 
 3. [**Apps**](./instageo/new_apps/README.md): A geospatial analysis platform featuring interactive mapping, task-based processing, and real-time monitoring capabilities.
 <div align="center">
-
-![InstaGeo App](assets/instageo_app.gif)
-</div>
-
-## Paper and Key Results
-
-📄 Paper: [InstaGeo: Compute-Efficient Geospatial Machine Learning from Data to Deployment](https://arxiv.org/abs/2510.05617)
-
-| Task                                      | Model                 | Dataset                                                                 | GFM              | mIoU (std) | Acc    | mF1 (std)   | ROC-AUC (std) |
-| ----------------------------------------- | --------------------- | ----------------------------------------------------------------------- | ---------------- | ---------- | ------ | ----------- | ------------- |
-| Flood Mapping                             | Baseline              | [Original](https://github.com/cloudtostreet/Sen1Floods11)               | Prithvi-V1-100M  | 88.3 (0.3) | --     | 97.3 (0.1)  | --            |
-| Flood Mapping                             | InstaGeo-Baseline     | [Original](https://github.com/cloudtostreet/Sen1Floods11)               | Prithvi-V1-100M  | 88.53      | 97.24  | 93.71       | 99.16         |
-| Flood Mapping                             | InstaGeo-Replica (HLS)| [Replica (HLS)](https://console.cloud.google.com/storage/browser/instageo/data/sen1floods-hls-replica) | Prithvi-V1-100M  | 85.40      | 96.39  | 91.78       | 97.15         |
-| Flood Mapping                             | InstaGeo-Replica (S2) | [Replica (S2)](https://console.cloud.google.com/storage/browser/instageo/data/sen1floods-s2-replica)   | Prithvi-V1-100M  | 87.80      | 97.07  | 93.26       | 97.61         |
-| Multi-Temporal Crop Segmentation (US)     | Baseline              | [Original](https://huggingface.co/datasets/ibm-nasa-geospatial/multi-temporal-crop-classification)      | Prithvi-V1-100M  | 42.7       | 60.7   | --          | --            |
-| Multi-Temporal Crop Segmentation (US)     | InstaGeo-Baseline     | [Original](https://huggingface.co/datasets/ibm-nasa-geospatial/multi-temporal-crop-classification)      | Prithvi-V1-100M  | 48.07      | 65.77  | 64.34       | 95.79         |
-| Multi-Temporal Crop Segmentation (US)     | InstaGeo-Replica      | [Replica](https://console.cloud.google.com/storage/browser/instageo/data/multitemporal-crop-classification-replica)       | Prithvi-V1-100M  | 47.87      | 66.10  | 64.19       | 95.82         |
-| Multi-Temporal Crop Segmentation (US)     | InstaGeo-Expanded (2022, 14k) | [InstaGeo-US-CDL-2022-14k](https://console.cloud.google.com/storage/browser/instageo/data/multitemporal-crop-segmentation-US-CDL-2022) | Prithvi-V2-300M  | 60.65      | 83.02  | 73.46       | 97.99         |
-| Multi-Temporal Crop Segmentation (US)     | InstaGeo-2024 (18k)   | [InstaGeo-US-CDL-2024-18k](https://console.cloud.google.com/storage/browser/instageo/data/multitemporal-crop-segmentation-US-CDL-2024) | Prithvi-V2-300M  | 54.86      | 83.30  | 67.19       | 97.96         |
-| Locust Breeding Ground Prediction         | Baseline              | [Original](https://console.cloud.google.com/storage/browser/instageo/data/locust_breeding)               | Prithvi-V1-100M  | --         | 83.03  | 81.53       | --            |
-| Locust Breeding Ground Prediction         | InstaGeo-Baseline     | [Original](https://console.cloud.google.com/storage/browser/instageo/data/locust_breeding)               | Prithvi-V1-100M  | 71.51      | 83.39  | 83.39       | 86.74         |
-| Locust Breeding Ground Prediction         | InstaGeo-Replica      | [Replica](https://console.cloud.google.com/storage/browser/instageo/data/locust-replica)                 | Prithvi-V1-100M  | 73.30      | 84.60  | 84.60       | 88.66         |
-
-For task-specific details and pretrained models, see the [Model component documentation](./instageo/model/README.md).
 
 ## Installation
 
