@@ -5,8 +5,6 @@
 The **InstaGeo Model** component powers training, validation, and inference using custom deep learning architectures built on the [Prithvi](https://huggingface.co/ibm-nasa-geospatial) family of geospatial foundational models.
 It is part of the InstaGeo ecosystem, a modular framework for large-scale geospatial machine learning and AI for Social Good applications.
 
-📄 **Paper:** [InstaGeo: Compute-Efficient Geospatial Machine Learning from Data to Deployment](https://arxiv.org/abs/2510.05617)
-
 <!-- 📦 **Dataset Access:** [Download Dataset Placeholder Link]()
 
 💾 **Model Checkpoints:** [Download Checkpoints Placeholder Link]() -->
