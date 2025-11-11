@@ -1,6 +1,6 @@
 ## Overview
 
-InstaGeo is an end-to-end geospatial machine learning framework that automates data preprocessing, model training, inference and deployment, enabling seamless extraction of actionable insights from satellite imagery such [Harmonized Landsat and Sentinel-2 (HLS)](https://hls.gsfc.nasa.gov/) and [Sentinel-2](https://dataspace.copernicus.eu/data-collections/copernicus-sentinel-data/sentinel-2) and [Sentinel-1](https://sentinels.copernicus.eu/copernicus/sentinel-1).
+InstaGeo is an end-to-end geospatial machine learning system that automates data processing, model training, inference and deployment, enabling seamless extraction of actionable insights from satellite imagery such [Harmonized Landsat and Sentinel-2 (HLS)](https://hls.gsfc.nasa.gov/) and [Sentinel-2](https://dataspace.copernicus.eu/data-collections/copernicus-sentinel-data/sentinel-2) and [Sentinel-1](https://sentinels.copernicus.eu/copernicus/sentinel-1).
 
 It leverages the [Prithvi](https://huggingface.co/ibm-nasa-geospatial/Prithvi-100M) geospatial foundational model and consists of three core components: Data, Model, and Apps, each tailored to support various aspects of geospatial data retrieval, manipulation, preprocessing, model training, and inference serving.
 
